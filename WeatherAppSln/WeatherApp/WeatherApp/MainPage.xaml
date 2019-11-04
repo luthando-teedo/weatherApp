@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WeatherApp.MainPage"
+             BackgroundImageSource="bgImg.jpg">
+
+    <StackLayout>
+        <Label Text="Cape Town" TextColor="White" FontSize="20" Margin="50,0,0,0"/>
+        <FlexLayout AlignItems="Center" Margin="110,-30,0,0">
+            <Label x:Name="largeNumber" Text="" FontSize="Header" TextColor="White"/>
+            <Label Text="°c" TextColor="White" FontSize="90"/>
+        </FlexLayout>
+
+        <Frame CornerRadius="20" WidthRequest="600" BackgroundColor="#80000000" Margin="20,0,20,0">
+            <FlexLayout JustifyContent="SpaceEvenly">
+                <StackLayout>
+                    <Image Source="water.png"/>
+                    <Label Text="50%" TextColor="white" Margin="15,0,0,0"/>
+                    <Label Text="Humidity" TextColor="white"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image Source="xhesha.png"/>
+                    <Label Text="1011 hpa" TextColor="white" />
+                    <Label Text="Pressure" TextColor="white"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image Source="sky.png"/>
+                    <Label Text="23%" TextColor="white" Margin="20,0,0,0"/>
+                    <Label Text="Cloudress" TextColor="white"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image Source="moya.png"/>
+                    <Label x:Name="Windspeed" Text="" TextColor="white" />
+                    <Label Text="Wind" TextColor="white"/>
+                </StackLayout>
+            </FlexLayout>
+        </Frame>
+        <AbsoluteLayout VerticalOptions="Center" HorizontalOptions="Center" >
+            <ActivityIndicator x:Name="ActivityInd" HeightRequest="100" WidthRequest="100" IsVisible="False"/>
+        </AbsoluteLayout>
+        <StackLayout>
+
+
+            <Frame  x:Name="monday"  CornerRadius="10" Margin="10,0,10,0" BackgroundColor="#80000000">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapped"/>
+                </Frame.GestureRecognizers>
+                <FlexLayout JustifyContent="SpaceBetween">
+                    <Label Text="Monday" TextColor="white" FontSize="15"/>
+                    <Image Source="rainycloud.png" Scale="1.4"/>
+                    <Label Text="21°c" TextColor="white" FontSize="20"/>
+                </FlexLayout>
+                
+            </Frame>
+            
+            <Frame CornerRadius="10" Margin="10,0,10,0" BackgroundColor="#80000000">
+                <FlexLayout JustifyContent="SpaceBetween">
+                    <Label Text="Tuesday" TextColor="white" FontSize="15"/>
+                    <Image Source="rainClouds.png" Scale="1.8"/>
+                    <Label Text="16°c" TextColor="white" FontSize="20"/>
+                </FlexLayout>
+            </Frame>
+            <Frame CornerRadius="10" Margin="10,0,10,0" BackgroundColor="#80000000">
+                <FlexLayout JustifyContent="SpaceBetween">
+                    <Label Text="Wednesday" TextColor="white" FontSize="15"/>
+                    <Image Source="sunlight.png" Scale="1.8" Margin="0,0,15,0"/>
+                    <Label Text="31°c" TextColor="white" FontSize="20"/>
+                </FlexLayout>
+            </Frame>
+            <Frame CornerRadius="10" Margin="10,0,10,0" BackgroundColor="#80000000">
+                <FlexLayout JustifyContent="SpaceBetween">
+                    <Label Text="Thursday" TextColor="white" FontSize="15"/>
+                    <Image Source="rainycloud.png" Scale="1.4"/>
+                    <Label Text="19°c" TextColor="white" FontSize="20"/>
+                </FlexLayout>
+            </Frame>
+
+       
+                <Frame BackgroundColor="#ffffff">
+                <FlexLayout JustifyContent="SpaceEvenly" >
+                    <StackLayout Margin="0,-20,0,0">
+                        <Image Source="home.png" Scale=".9"/>
+                        <Label Text="DashBoard"/>
+                    </StackLayout>
+
+                    <StackLayout Margin="0,-20,0,0">
+                        <Image Source="location.png" Scale=".9"/>
+                        <Label Text="Your Location"/>
+                    </StackLayout>
+                    <StackLayout Margin="0,-20,0,0">
+                        <Image Source="addlocation.png" Scale=".9"/>
+                        <Label Text="Add Location"/>
+                    </StackLayout>
+                    <StackLayout Margin="0,-20,0,0">
+                        <Image Source="settings.png" Scale=".9"/>
+                        <Label Text="Settings"/>
+                    </StackLayout>
+                </FlexLayout>
+            </Frame>
+
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
